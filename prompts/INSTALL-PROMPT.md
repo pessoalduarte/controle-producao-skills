@@ -8,6 +8,9 @@
 ## Prompt para colar no inicio de cada novo projeto:
 
 ```
+Se a skill production-tracker NAO estiver instalada, instale:
+npx skills add https://github.com/pessoalduarte/controle-producao-skills --agent claude-code --skill '*' -y
+
 Ative a skill production-tracker para este projeto. Configure o controle de producao profissional com as seguintes regras:
 
 1. SEMPRE registre todas as atividades com timestamp (America/Sao_Paulo)

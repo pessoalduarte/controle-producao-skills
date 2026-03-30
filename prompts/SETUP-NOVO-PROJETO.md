@@ -44,7 +44,7 @@ REGRA DE INSTALACAO:
 | mem-search, timeline-report | https://github.com/thedotmack/claude-mem |
 | skill-creator | https://github.com/mgechev/skills-best-practices |
 | dev-browser | https://github.com/SawyerHood/dev-browser |
-| production-tracker | Ja deve existir em ~/.claude/skills/ |
+| production-tracker | https://github.com/pessoalduarte/controle-producao-skills |
 
 ### Plugins Obrigatorios (verificar nos plugins instalados):
 - playwright (automacao visual de browser)
