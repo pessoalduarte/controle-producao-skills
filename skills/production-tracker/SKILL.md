@@ -84,6 +84,37 @@ comando "atualizar dados do projeto".
 5. **Nunca pular registro** — mesmo tarefas pequenas contam como producao
 6. **Cada tarefa DEVE ter hora de inicio e hora de fim** — para calculo de duracao
 7. **Ao fim, calcular total de horas e justificativa** — indispensavel
+8. **HORARIOS DEVEM SER REAIS — NUNCA INVENTAR**
+9. **Registrar apenas FATOS — nunca suposicoes**
+
+### 2.1 Regra de Horarios Reais (CRITICA)
+
+**NUNCA estimar, supor ou inventar horarios.** O production-tracker serve para
+justificar honorarios — horarios falsos comprometem a credibilidade do relatorio.
+
+Antes de CADA registro de atividade, consultar o horario real:
+
+```bash
+python -c "from datetime import datetime; import pytz; tz = pytz.timezone('America/Sao_Paulo'); print(datetime.now(tz).strftime('%H:%M'))"
+```
+
+Regras:
+- Horario confirmado pelo programador (ex: "comecei as 9") → usar como real
+- Horario obtido via comando acima → usar como real
+- Horario aproximado (nao verificado) → marcar com (~) antes do horario
+- **NUNCA** colocar horario preciso sem te-lo verificado
+
+### 2.2 Regra de Fatos Documentados
+
+O production-tracker registra **acoes que aconteceram**, nao previsoes ou suposicoes.
+
+- ✅ "Lidas 5 transcricoes de reunioes" — FATO (aconteceu)
+- ✅ "Criado arquivo docs/analises/etapa-01.md" — FATO (verificavel)
+- ❌ "Analise deve levar ~2h" — PREVISAO (nao registrar como atividade)
+- ❌ "Sistema provavelmente precisa de X" — SUPOSICAO (nao registrar)
+
+Se uma atividade foi iniciada mas nao concluida, registrar como "Em andamento"
+com hora de inicio real. Hora de fim sera preenchida quando concluir.
 
 ---
 
